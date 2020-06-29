@@ -1,0 +1,40 @@
+.nav-link {
+  position: relative;
+  display: block;
+  margin-bottom: 0px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  cursor: pointer;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  color: $title-text-color;
+  font-family: $font-first;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $accent-color;
+  }
+  &.curent {
+    color: $accent-color;
+  }
+
+  &.curent::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    bottom: 0;
+    background-color: $accent-color;
+  }
+}
