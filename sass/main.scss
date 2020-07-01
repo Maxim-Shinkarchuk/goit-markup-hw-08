@@ -1,21 +1,3 @@
-@import "./components/base";
-@import "./utils/variables";
-@import "./components/body";
-@import "./components/header";
-@import "./components/nav";
-@import "./components/nav-links";
-@import "./components/address-nav";
-@import "./components/logo";
-@import "./components/buttons";
-@import "./components/main-portfolio";
-@import "./components/hero";
-@import "./components/features";
-@import "./components/profile";
-@import "./components/team";
-@import "./components/social";
-@import "./components/clients";
-@import "./components/footer";
-@import "./components/modal";
-@import "./components/portfolio";
-@import "./components/buttons-list";
-@import "./components/portfolio-production";
+body {
+  background-color: green($color: #000000);
+}
