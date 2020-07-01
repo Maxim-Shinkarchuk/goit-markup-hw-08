@@ -62,49 +62,77 @@ body {
 }
 
 .header-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 1200px;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 16px, 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .header-container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-container {
+    width: 768px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 26px, 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 1200px;
+    padding: 24px, 15px;
+  }
 }
 
 /*стиль навигации*/
 .main-nav {
-  display: inline-block;
   margin-top: 0px;
   margin-bottom: 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .main-nav .list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 85px;
-  padding-left: 0px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-top: 0px;
   margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
 }
 
-.main-nav .item + .item {
-  margin-left: 50px;
+@media screen and (min-width: 768px) {
+  .main-nav .list {
+    display: inline-block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.main-nav .item {
+  text-align: center;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .main-nav .item + .item {
+    margin-left: 50px;
+  }
 }
 
 .nav-link {
   position: relative;
-  display: block;
-  margin-bottom: 0px;
-  padding-top: 32px;
-  padding-bottom: 32px;
   cursor: pointer;
   -webkit-transition-property: color;
   transition-property: color;
@@ -121,6 +149,15 @@ body {
   letter-spacing: 0.02em;
 }
 
+@media screen and (min-width: 768px) {
+  .nav-link {
+    display: block;
+    margin-bottom: 0px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
 .nav-link:hover, .nav-link:focus, .nav-link:active {
   color: #2196f3;
 }
@@ -132,6 +169,7 @@ body {
 .nav-link.curent::after {
   content: "";
   position: absolute;
+  bottom: 0;
   display: block;
   width: 100%;
   height: 4px;
@@ -201,19 +239,32 @@ body {
 
 /*лого*/
 .logo {
-  color: #2196f3;
+  font-family: Raleway, sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: Raleway, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+  padding-left: 16px;
+  color: #2196f3;
+}
+
+@media screen and (min-width: 480px) {
+  .logo {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 0.03em;
+    line-height: 1.16;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .logo-header {
@@ -224,9 +275,16 @@ body {
   font-family: Raleway, sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 1200px) {
+  .logo-header {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .logo-footer {
@@ -333,6 +391,7 @@ body {
   margin-bottom: 0px;
   margin-left: auto;
   text-align: center;
+  text-transform: uppercase;
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 900;

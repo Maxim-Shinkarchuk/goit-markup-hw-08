@@ -1,20 +1,46 @@
 /*стиль навигации*/
-.main-nav{
-    display: inline-block;
+.main-nav {
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  & .list {
     margin-top: 0px;
     margin-bottom: 0px;
-    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
 
-    .list {
-    display: flex;
-    margin-left: 85px;
-    padding-left: 0px;
-    align-items: center;
-    margin-top: 0px;
-    margin-bottom: 0px;
-   }
+    @media screen and (min-width: 480px) {
+    }
 
-    .item + .item {
-    margin-left: 50px;
-}
+    @media screen and (min-width: 768px) {
+      display: inline-block;
+      display: flex;
+      align-items: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+    }
+  }
+
+  & .item {
+    text-align: center;
+    padding-bottom: 40px;
+    position: relative;
+
+    @media screen and (min-width: 480px) {
+    }
+
+    @media screen and (min-width: 768px) {
+    }
+
+    @media screen and (min-width: 1200px) {
+    }
+  }
+
+  & .item + .item {
+    @media screen and (min-width: 768px) {
+      margin-left: 50px;
+    }
+  }
 }

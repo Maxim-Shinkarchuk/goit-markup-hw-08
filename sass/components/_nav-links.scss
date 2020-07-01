@@ -1,9 +1,5 @@
 .nav-link {
   position: relative;
-  display: block;
-  margin-bottom: 0px;
-  padding-top: 32px;
-  padding-bottom: 32px;
 
   cursor: pointer;
   transition-property: color;
@@ -18,6 +14,19 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
 
+  @media screen and (min-width: 480px) {
+  }
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-bottom: 0px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
+
   &:hover,
   &:focus,
   &:active {
@@ -30,6 +39,7 @@
   &.curent::after {
     content: "";
     position: absolute;
+    bottom: 0;
     display: block;
     width: 100%;
     height: 4px;
