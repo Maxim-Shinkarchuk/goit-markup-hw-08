@@ -1,0 +1,15 @@
+/*Портфолио*/
+.production .list {
+  background-color: $title-second-text-color;
+}
+
+.production .hide-text {
+  background-color: $accent-color;
+  color: $title-second-text-color;
+  font-family: $font-first;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+}

@@ -1,0 +1,17 @@
+/* хедер*/
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+
+.header-container {
+  display: flex;
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @media (min-width: 480px) {
+    width: 480px;
+  }
+}
