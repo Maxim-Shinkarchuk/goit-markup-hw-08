@@ -15,12 +15,22 @@
   letter-spacing: 0.03em;
 }
 
-.clients.list {
-  display: flex;
+.clients-list {
   padding-top: 50px;
   padding-left: 0px;
-  justify-content: space-between;
   margin: 0px;
+
+  @media screen and (min-width: 480px) {
+    width: calc((100%-4 * 15) / 2);
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .clients__logo {

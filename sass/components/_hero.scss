@@ -1,7 +1,7 @@
 /*стиль главного фона и цвет заголовка*/
 .section-hero {
-  max-width: 1600px;
-  max-height: 600px;
+  max-width: 480px;
+  max-height: 400px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 200px;
@@ -10,15 +10,27 @@
       rgba(47, 48, 58, 0.8),
       rgba(47, 48, 58, 0.8)
     ),
-    url(../images/hero/hero.jpg);
+    url(/images/hero/Header\img-480x400.jpg);
   background-color: rgb(49, 3, 3);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: $title-second-text-color;
 
+  @media screen and (min-width: 480px) {
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+    max-height: 600px;
+  }
+
   & .title {
-    width: 646px;
+    max-width: 360px;
     margin-top: 0px;
     margin-right: auto;
     margin-bottom: 0px;
@@ -29,9 +41,14 @@
     font-family: $font-first;
     font-style: normal;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.61;
     letter-spacing: 0.06em;
     color: $title-second-text-color;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
 }

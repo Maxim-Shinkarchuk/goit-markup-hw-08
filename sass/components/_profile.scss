@@ -1,5 +1,16 @@
 /*наш профиль*/
 
+.container.features {
+  display: none;
+  @media screen and (min-width: 480px) {
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
+}
 .profile.title {
   margin-top: 0px;
   margin-bottom: 50px;

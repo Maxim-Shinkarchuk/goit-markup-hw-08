@@ -21,31 +21,28 @@
         <a class="logo" href="./index.html">Web<span class="logo-header">Studio</span></a>
         <!--Меню навигации-->
         <nav class="main-nav">
-          <ul class="list">
-            <li class="item">
+          <ul class="nav-list">
+            <li class="nav-item">
               <a href="./index.html" class="nav-link curent">
                 Студия
               </a>
             </li>
 
-            <li class="item">
+            <li class="nav-item">
               <a href="./portfolio.html" class="nav-link">
                 Портфолио
               </a>
             </li>
 
-            <li class="item">
+            <li class="nav-item">
               <a href="" class="nav-link">
                 Контакты
               </a>
             </li>
           </ul>
-        </nav>
-
-        <!--Связь-->
-        <address class="address-nav">
-          <ul class="list">
-            <li class="item">
+          <!--Связь-->
+          <ul class="contact-list">
+            <li class="contact-item">
               <a href="mailto:info@devstudio.com" class="address-mail">
                 <svg class="icon-address" width=16 height=11>
                   <use href=./images/symbol-defs.svg#icon-envelope></use>
@@ -53,7 +50,7 @@
                 info@devstudio.com
               </a>
             </li>
-            <li class="item">
+            <li class="contact-item">
               
               <a href="tel:+380961111111" class="address-mail">
                 <svg class="icon-address" width="10" height="15">
@@ -63,7 +60,9 @@
             </a>
             </li>
           </ul>
-        </address>
+        </nav>
+
+        
       </div>
     </header>
     <main>
@@ -75,7 +74,7 @@
 
       <!--Наши Особенности-->
       <section class="section">
-        <div class="container">
+        <div class="container features">
           <h2 class="visually-hidden">Особенности</h2>
           <ul class="features list">
             <li class="features item">
@@ -135,7 +134,7 @@
 
       <!--Чем мы занимаемся-->
       <section class="section">
-        <div class="container fetures">
+        <div class="container features">
           <h2 class="profile title">Чем мы занимаемся</h2>
           <ul class="profile list">
             <li class="profile item">
@@ -172,17 +171,16 @@
 
       <!--Наша команда-->
       <section class="section team">
-        <div class="container">
+        <div class="container-team">
           <h2 class="title">Наша команда</h2>
-          <ul class="list">
+          <ul class="team-list">
             <li class="item team-card">
               <div class="team__card">
                 <img
                   class="team__image"
-                  src="./images/Team/john-smith.jpg"
+                  srcset="
+                  ./images/Team/450x320/john-smith-450x320.jpg,"
                   alt="Жека Семёнов"
-                  width="270"
-                  height="260"
                 />
                 <div class="team__content-card">
                   <h3 class="name">Жека Семёнов</h3>
@@ -363,7 +361,7 @@
       <section class="section">
         <div class="container">
           <h2 class="clients title">Постоянные клиенты</h2>
-          <ul class="clients list">
+          <ul class="clients-list">
             <li class="clients-item">
               <a class="clients__logo" href="">
                 <svg class="clients-icon" width=44 height=49>

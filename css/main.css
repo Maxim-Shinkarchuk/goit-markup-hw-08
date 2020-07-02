@@ -99,7 +99,7 @@ body {
   margin-bottom: 0px;
 }
 
-.main-nav .list {
+.nav-list {
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: auto;
@@ -108,7 +108,7 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .main-nav .list {
+  .nav-list {
     display: inline-block;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -119,14 +119,14 @@ body {
   }
 }
 
-.main-nav .item {
+.nav-item {
   text-align: center;
   padding-bottom: 40px;
   position: relative;
 }
 
 @media screen and (min-width: 768px) {
-  .main-nav .item + .item {
+  .nav-item + .nav-item {
     margin-left: 50px;
   }
 }
@@ -178,39 +178,32 @@ body {
   background-color: #2196f3;
 }
 
-.address-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.contact-list {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-left: auto;
-}
-
-.address-nav .list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0;
+  margin-right: auto;
   padding: 0;
   list-style: none;
 }
 
-.address-nav .item + .item {
+@media screen and (min-width: 768px) {
+  .contact-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.contact-item + .contact-item {
   margin-left: 30px;
 }
 
 /*стиль адреса*/
 .address-mail {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  text-align: center;
+  display: block;
   cursor: pointer;
   -webkit-transition-property: color;
   transition-property: color;
@@ -225,6 +218,21 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+
+@media screen and (min-width: 480px) {
+  .address-mail {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address-mail {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .address-mail:hover, .address-mail:focus, .address-mail:active {
@@ -248,15 +256,15 @@ body {
           align-items: center;
   padding-left: 16px;
   color: #2196f3;
+  font-size: 24px;
+  line-height: 1.16;
 }
 
 @media screen and (min-width: 480px) {
   .logo {
-    font-size: 24px;
     font-style: normal;
     font-weight: bold;
     letter-spacing: 0.03em;
-    line-height: 1.16;
   }
 }
 
@@ -369,14 +377,14 @@ body {
 
 /*стиль главного фона и цвет заголовка*/
 .section-hero {
-  max-width: 1600px;
-  max-height: 600px;
+  max-width: 480px;
+  max-height: 400px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(../images/hero/hero.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/hero/hero.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(/images/hero/Header\img-480x400.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(/images/hero/Header\img-480x400.jpg);
   background-color: #310303;
   background-repeat: no-repeat;
   background-position: center;
@@ -384,8 +392,21 @@ body {
   color: #ffffff;
 }
 
+@media screen and (min-width: 768px) {
+  .section-hero {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section-hero {
+    max-width: 1600px;
+    max-height: 600px;
+  }
+}
+
 .section-hero .title {
-  width: 646px;
+  max-width: 360px;
   margin-top: 0px;
   margin-right: auto;
   margin-bottom: 0px;
@@ -395,28 +416,55 @@ body {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.61;
   letter-spacing: 0.06em;
   color: #ffffff;
 }
 
-.container .list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 0px;
+@media screen and (min-width: 1200px) {
+  .section-hero .title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
+}
+
+.features .list {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
 }
 
+@media screen and (min-width: 768px) {
+  .features .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .features.item {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 270px;
+  max-width: 450px;
+}
+
+@media screen and (min-width: 768px) {
+  .features.item {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features.item {
+    width: 280px;
+  }
 }
 
 .features.item:not(:last-child) {
@@ -440,8 +488,7 @@ body {
 }
 
 .features.title {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  text-align: center;
   padding-left: 0px;
   margin-bottom: 0px;
   margin-top: 30px;
@@ -452,6 +499,13 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 768px) {
+  .features.title {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
 }
 
 .features.text {
@@ -467,6 +521,10 @@ body {
 }
 
 /*наш профиль*/
+.container.features {
+  display: none;
+}
+
 .profile.title {
   margin-top: 0px;
   margin-bottom: 50px;
