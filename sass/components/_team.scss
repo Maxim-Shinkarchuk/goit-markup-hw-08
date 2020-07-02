@@ -1,7 +1,8 @@
 .section.team {
   background-color: $accent-background-color;
-  width: 480px;
+
   @media screen and (min-width: 480px) {
+    width: 480px;
   }
 
   @media screen and (min-width: 768px) {
@@ -12,8 +13,8 @@
 }
 
 .container-team {
-  width: 480px;
   @media screen and (min-width: 480px) {
+    width: 480px;
   }
 
   @media screen and (min-width: 768px) {

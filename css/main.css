@@ -43,11 +43,28 @@ a {
 }
 
 .container {
-  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 /* стили для боди */
@@ -61,20 +78,20 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
-.header-container {
+.container {
   margin-right: auto;
   margin-left: auto;
   padding: 16px, 15px;
 }
 
 @media screen and (min-width: 480px) {
-  .header-container {
+  .container {
     width: 480px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .header-container {
+  .container {
     width: 768px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -84,7 +101,7 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-  .header-container {
+  .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -590,6 +607,18 @@ body {
   background-color: #f5f4fa;
 }
 
+@media screen and (min-width: 480px) {
+  .section.team {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .container-team {
+    width: 480px;
+  }
+}
+
 .team .title {
   margin-top: 0px;
   margin-right: auto;
@@ -606,23 +635,42 @@ body {
   letter-spacing: 0.03em;
 }
 
-.team .list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+.team-list {
   margin-top: 50px;
   margin-bottom: 0px;
   padding-left: 0px;
 }
 
-.team .item {
-  width: 270px;
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
-.team.card {
+@media screen and (min-width: 480px) {
+  .item.team-card {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .item.team-card {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .item.team-card {
+    width: 270px;
+  }
+}
+
+.team .card {
   background-color: #ffffff;
 }
 
@@ -631,12 +679,30 @@ body {
 }
 
 .team__content-card {
-  width: 270px;
   padding-top: 30px;
   padding-bottom: 24px;
+  width: 450px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (min-width: 480px) {
+  .team__content-card {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team__content-card {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team__content-card {
+    width: 270px;
+  }
 }
 
 .item.team-card {
@@ -728,16 +794,27 @@ body {
   letter-spacing: 0.03em;
 }
 
-.clients.list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.clients-list {
   padding-top: 50px;
   padding-left: 0px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin: 0px;
+}
+
+@media screen and (min-width: 480px) {
+  .clients-list {
+    width: calc((100%-4 * 15) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .clients__logo {
