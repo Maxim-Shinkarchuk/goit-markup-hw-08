@@ -18,6 +18,7 @@
   }
 
   @media screen and (min-width: 768px) {
+    margin-right: 50px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -28,9 +29,7 @@
 }
 
 .logo-header {
-  display: block;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  display: inline-block;
 
   color: $title-text-color;
   font-family: $font-second;
@@ -43,6 +42,13 @@
   @media screen and (min-width: 1200px) {
     font-size: 26px;
     line-height: 1.19;
+  }
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 }
 
