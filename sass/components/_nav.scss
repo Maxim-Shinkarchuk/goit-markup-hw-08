@@ -2,7 +2,8 @@
 .main-nav {
   margin-top: 0px;
   margin-bottom: 0px;
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 768px) {
+    flex-grow: 1;
   }
 }
 .nav-list {
@@ -16,9 +17,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    display: inline-block;
     display: flex;
-    align-items: center;
   }
 
   @media screen and (min-width: 1200px) {

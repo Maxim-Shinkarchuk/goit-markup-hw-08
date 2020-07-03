@@ -11,6 +11,7 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: column;
+    margin: 0px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -49,6 +50,7 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
   }
 
   @media screen and (min-width: 1200px) {
