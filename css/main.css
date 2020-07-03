@@ -110,6 +110,12 @@ body {
   }
 }
 
+.page-header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 /*стиль навигации*/
 .main-nav {
   margin-top: 0px;
@@ -316,6 +322,7 @@ body {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin-top: 0px;
     margin-right: 50px;
   }
 }
