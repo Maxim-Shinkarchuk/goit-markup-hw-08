@@ -13,14 +13,26 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
+    flex-wrap: wrap;
+    flex-basis: calc((100%-4 * 15) / 2);
   }
 
   @media screen and (min-width: 1200px) {
+    display: inline-block;
   }
 }
 
 .features-item {
   margin: 0px;
+  @media screen and (min-width: 480px) {
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100%-30px * 2) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
 }
 
 .features-item:not(:last-child) {
@@ -51,6 +63,7 @@
 
   @media screen and (min-width: 768px) {
     width: 354px;
+    margin: 0px;
   }
 
   @media screen and (min-width: 1200px) {

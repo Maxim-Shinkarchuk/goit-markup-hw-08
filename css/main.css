@@ -37,22 +37,22 @@ a {
   overflow: hidden;
 }
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 @media screen and (min-width: 480px) {
   .section {
     padding: 0px;
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 @media screen and (min-width: 480px) {
@@ -70,6 +70,8 @@ a {
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -110,10 +112,16 @@ body {
   }
 }
 
-.page-header .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (min-width: 480px) {
+  .page-header .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 /*стиль навигации*/
@@ -152,6 +160,17 @@ body {
   position: relative;
 }
 
+@media screen and (min-width: 480px) {
+  .nav-item {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .nav-item + .nav-item {
     margin-left: 50px;
@@ -171,9 +190,16 @@ body {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 18px;
+  line-height: 1, 16;
   letter-spacing: 0.02em;
+}
+
+@media screen and (min-width: 480px) {
+  .nav-link {
+    display: inline-block;
+    padding-bottom: 8px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -182,6 +208,13 @@ body {
     margin-bottom: 0px;
     padding-top: 32px;
     padding-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-link {
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
@@ -311,7 +344,13 @@ body {
     font-weight: bold;
     letter-spacing: 0.03em;
     padding: 0px;
-    margin-top: 60px;
+    margin-top: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
   }
 }
 
@@ -553,11 +592,28 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-preferred-size: calc((100%-4 * 15) / 2);
+        flex-basis: calc((100%-4 * 15) / 2);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features.list {
+    display: inline-block;
   }
 }
 
 .features-item {
   margin: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .features-item {
+    -ms-flex-preferred-size: calc((100%-30px * 2) / 2);
+        flex-basis: calc((100%-30px * 2) / 2);
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -592,6 +648,7 @@ body {
 @media screen and (min-width: 768px) {
   .features-icon {
     width: 354px;
+    margin: 0px;
   }
 }
 
@@ -638,8 +695,16 @@ body {
 }
 
 /*наш профиль*/
-.container.features {
-  display: none;
+@media screen and (min-width: 480px) {
+  .container.features {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container.features {
+    display: block;
+  }
 }
 
 .profile.title {
@@ -713,9 +778,21 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .section.team {
+    width: 768px;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .container-team {
     width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container-team {
+    width: 768px;
   }
 }
 
@@ -751,15 +828,17 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .team-list {
     margin-top: 50px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -899,6 +978,13 @@ body {
 }
 
 /*постоянные клиенты*/
+@media screen and (min-width: 768px) {
+  .container-clients {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+}
+
 .clients.title {
   text-align: center;
   margin-top: 0px;
@@ -910,6 +996,12 @@ body {
   font-size: 36px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 768px) {
+  .clients.title {
+    margin-bottom: 0px;
+  }
 }
 
 .clients-list {
@@ -945,6 +1037,12 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .clients-item {
+    margin: 15px;
   }
 }
 

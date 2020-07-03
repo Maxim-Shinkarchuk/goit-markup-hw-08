@@ -20,5 +20,14 @@
 }
 
 .page-header .container {
-  display: flex;
+  @media screen and (min-width: 480px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
 }
