@@ -42,6 +42,12 @@ a {
   padding-bottom: 94px;
 }
 
+@media screen and (min-width: 480px) {
+  .section {
+    padding: 0px;
+  }
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -265,9 +271,6 @@ body {
 /*лого*/
 .logo {
   font-family: Raleway, sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -279,14 +282,20 @@ body {
 
 @media screen and (min-width: 480px) {
   .logo {
+    text-align: center;
     font-style: normal;
     font-weight: bold;
     letter-spacing: 0.03em;
+    padding: 0px;
+    margin-top: 60px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     font-size: 26px;
     line-height: 1.19;
   }
@@ -313,7 +322,6 @@ body {
 }
 
 .logo-footer {
-  display: block;
   margin: 0px;
   padding: 0px;
   color: #f5f4fa;
@@ -323,6 +331,18 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 480px) {
+  .logo-footer {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .logo-footer {
+    display: block;
+  }
 }
 
 /*стиль кнопок*/
@@ -349,6 +369,16 @@ body {
 
 .button-second {
   background-color: #2196f3;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .button-second {
+    margin-bottom: 44px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .button-second .text-button {
@@ -394,6 +424,16 @@ body {
 
 /*стиль главного фона и цвет заголовка*/
 .section-hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   max-width: 480px;
   max-height: 400px;
   margin-left: auto;
@@ -401,8 +441,8 @@ body {
   padding-top: 200px;
   padding-bottom: 200px;
   background-color: #310303;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url();
-  background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url();
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(/images/hero/Header\img-480x400.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(/images/hero/Header\img-480x400.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -423,7 +463,7 @@ body {
 }
 
 .section-hero .title {
-  max-width: 360px;
+  display: block;
   margin-top: 0px;
   margin-right: auto;
   margin-bottom: 0px;
@@ -439,14 +479,24 @@ body {
   color: #ffffff;
 }
 
+@media screen and (min-width: 480px) {
+  .section-hero .title {
+    max-width: 360px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .section-hero .title {
     font-size: 44px;
     line-height: 1.36;
+    max-width: 696px;
   }
 }
 
-.features .list {
+.features.list {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 60px;
@@ -458,34 +508,21 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .features .list {
+  .features.list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
 }
 
-.features.item {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  max-width: 450px;
-}
-
-@media screen and (min-width: 768px) {
-  .features.item {
-    width: 354px;
-  }
+.features-item {
+  margin: 0px;
 }
 
 @media screen and (min-width: 1200px) {
-  .features.item {
-    width: 280px;
+  .features-item:not(:last-child) {
+    margin-right: 30px;
   }
-}
-
-.features.item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .features-icon {
@@ -502,6 +539,28 @@ body {
   padding-top: 25px;
   padding-bottom: 25px;
   border-radius: 4px;
+}
+
+@media screen and (min-width: 480px) {
+  .features-icon {
+    max-width: 450px;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features-icon {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .features-icon {
+    width: 280px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .features.title {
@@ -619,12 +678,12 @@ body {
   }
 }
 
-.team .title {
+.team-title {
   margin-top: 0px;
   margin-right: auto;
   margin-bottom: 0px;
   margin-left: auto;
-  padding-top: 0px;
+  padding-top: 60px;
   color: #212121;
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -636,9 +695,14 @@ body {
 }
 
 .team-list {
-  margin-top: 50px;
   margin-bottom: 0px;
   padding-left: 0px;
+}
+
+@media screen and (min-width: 480px) {
+  .team-list {
+    margin-top: 30px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -649,6 +713,12 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list {
+    margin-top: 50px;
   }
 }
 
@@ -708,6 +778,14 @@ body {
 .item.team-card {
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (min-width: 480px) {
+  .item.team-card {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+  }
 }
 
 .team .name {
@@ -855,6 +933,7 @@ body {
   .clients__logo {
     width: 210px;
     height: 90px;
+    margin-bottom: 30px;
   }
 }
 
@@ -891,8 +970,19 @@ body {
   background-color: #2f303a;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 48px;
-  padding-bottom: 21px;
+}
+
+@media screen and (min-width: 480px) {
+  .footer {
+    padding-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer {
+    padding-top: 48px;
+    padding-bottom: 21px;
+  }
 }
 
 .container.footer-box {
@@ -906,6 +996,8 @@ body {
 
 @media screen and (min-width: 480px) {
   .container.footer-box {
+    padding-top: 60px;
+    padding-bottom: 16px;
     text-align: center;
   }
 }
@@ -940,6 +1032,12 @@ body {
   letter-spacing: 0.03em;
 }
 
+@media screen and (min-width: 480px) {
+  .footer__container__logo-adress__adress {
+    margin-top: 20px;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .footer__container__logo-adress__adress {
     margin-top: 10px;
@@ -961,6 +1059,7 @@ body {
 @media screen and (min-width: 480px) {
   .footer__container__logo-adress__contact {
     display: block;
+    margin-top: 8px;
   }
 }
 
@@ -996,6 +1095,8 @@ body {
 @media screen and (min-width: 480px) {
   .footer__container__social__slogan {
     text-align: center;
+    margin-top: 60px;
+    margin-bottom: 0px;
   }
 }
 
@@ -1005,8 +1106,23 @@ body {
   display: flex;
   padding-left: 0px;
   list-style-type: none;
-  margin-top: 0px;
-  margin-bottom: 56px;
+}
+
+@media screen and (min-width: 480px) {
+  .footer__container__social__social-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__container__social__social-list {
+    margin-top: 0px;
+    margin-bottom: 56px;
+  }
 }
 
 .footer__social-links {
@@ -1060,6 +1176,8 @@ body {
 @media screen and (min-width: 480px) {
   .footer__container__subscribe__join {
     text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
   }
 }
 
@@ -1086,6 +1204,13 @@ body {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+}
+
+@media screen and (min-width: 480px) {
+  .email-input {
+    width: 450px;
+    margin-bottom: 20px;
+  }
 }
 
 .button-second {
@@ -1134,6 +1259,12 @@ body {
   line-height: 2;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 480px) {
+  .footer__copyright-container {
+    display: none;
+  }
 }
 
 .backdrop {

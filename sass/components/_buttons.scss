@@ -20,10 +20,33 @@
   line-height: 1.88;
   letter-spacing: 0.06em;
   background-color: $accent-color;
+
+  @media screen and (min-width: 480px) {
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
 }
 
 .button-second {
   background-color: $accent-color;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (min-width: 480px) {
+    margin-bottom: 44px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
 
   & .text-button {
     display: flex;

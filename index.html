@@ -77,7 +77,7 @@
         <div class="container-features">
           <h2 class="visually-hidden">Особенности</h2>
           <ul class="features list">
-            <li class="features item">
+            <li class="features-item">
               <div class="features-icon">
                 <svg width=65 height=70>
                   <use href="./images/symbol-defs.svg#icon-antenna-1"></use>
@@ -90,7 +90,7 @@
               </p>
             </li>
 
-            <li class="features item">
+            <li class="features-item">
               <div class="features-icon">
                 <svg width=65 height=70>
                   <use href="./images/symbol-defs.svg#icon-clock-1"></use>
@@ -103,7 +103,7 @@
               </p>
             </li>
 
-            <li class="features item">
+            <li class="features-item">
               <div class="features-icon">
                 <svg width=65 height=70>
                   <use href="./images/symbol-defs.svg#icon-diagram-1"></use>
@@ -116,7 +116,7 @@
               </p>
             </li>
 
-            <li class="features item">
+            <li class="features-item">
               <div class="features-icon">
                 <svg width=65 height=70>
                   <use href="./images/symbol-defs.svg#icon-astronaut-1"></use>
@@ -172,15 +172,14 @@
       <!--Наша команда-->
       <section class="section team">
         <div class="container-team">
-          <h2 class="title">Наша команда</h2>
+          <h2 class="team-title">Наша команда</h2>
           <ul class="team-list">
             <li class="item team-card">
               <div class="team__card">
                 <img
                   class="team__image"
-                  srcset="
-                  ./images/Team/450x320/john-smith-450x320.jpg, ./images/Team/450x320/john-smith-450x320@2x.jpg 2x 450w"
-                
+                  srcset="./images/Team/450x320/john-smith-450x320.jpg 1x 450w,
+                  ./images/Team/450x320/john-smith-450x320@2x.jpg 2x 450w,"
                   alt="Жека Семёнов"
                 />
                 <div class="team__content-card">
@@ -223,10 +222,8 @@
               <div class="team__card">
                 <img
                   class="team__image"
-                  src="./images/Team/marta-stewart.jpg"
+                  srcset="./images/Team/450x320/marta-stewart-450x320.jpg 450w, ./images/Team/450x320/marta-stewart-450x320@2x.jpg 2x 450w,"
                   alt="Машка Свиридова.png"
-                  width="270"
-                  height="260"
                 />
                 <div class="team__content-card">
                   <h3 class="name">Машка Свиридова</h3>
@@ -268,10 +265,8 @@
               <div class="team__card">
                 <img
                   class="team__image"
-                  src="./images/Team/robert-jakis.jpg"
+                  srcset="./images/Team/450x320/robert-jakis-450x320.jpg 450w, ./images/Team/450x320/robert-jakis-450x320@2x.jpg 2x 450w,"
                   alt="Вова Янковский"
-                  width="270"
-                  height="260"
                 />
                 <div class="team__content-card">
                   <h3 class="name">Вова Янковский</h3>
@@ -313,10 +308,9 @@
               <div class="team__card">
                 <img
                   class="team__image"
-                  src="./images/Team/martin-doe.jpg"
+                  srcset="./images/Team/450x320/martin-doe-450x320.jpg 450w, ./images/Team/450x320/martin-doe-450x320@2x.jpg 2x 450w,"
                   alt="Мартын Данько"
-                  width="270"
-                  height="260"
+                 
                 />
                 <div class="team__content-card">
                   <h3 class="name">Мартын Данько</h3>
