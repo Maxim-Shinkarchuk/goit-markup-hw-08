@@ -18,7 +18,7 @@
   }
 
   @media screen and (min-width: 1200px) {
-    display: inline-block;
+    flex-basis: calc((100%-6 * 15) / 4);
   }
 }
 

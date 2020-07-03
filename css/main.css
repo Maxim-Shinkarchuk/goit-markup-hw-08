@@ -601,7 +601,8 @@ body {
 
 @media screen and (min-width: 1200px) {
   .features.list {
-    display: inline-block;
+    -ms-flex-preferred-size: calc((100%-6 * 15) / 4);
+        flex-basis: calc((100%-6 * 15) / 4);
   }
 }
 
