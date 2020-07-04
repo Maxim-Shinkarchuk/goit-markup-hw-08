@@ -36,7 +36,7 @@ a {
 
 .section {
   @media screen and (min-width: 480px) {
-    padding: 0px;
+    padding: 60px 0px 60px 0px;
   }
 
   @media screen and (min-width: 768px) {
@@ -53,6 +53,7 @@ a {
   margin-right: auto;
 
   @media screen and (min-width: 480px) {
+    padding: 60px 15px;
     width: 480px;
   }
 

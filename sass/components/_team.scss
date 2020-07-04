@@ -10,11 +10,13 @@
   }
 
   @media screen and (min-width: 1200px) {
+    width: 1200px;
   }
 }
 
 .container-team {
   @media screen and (min-width: 480px) {
+    padding: 60px 15px;
     width: 480px;
   }
 
@@ -23,6 +25,7 @@
   }
 
   @media screen and (min-width: 1200px) {
+    width: 1200px;
   }
 }
 
@@ -31,7 +34,6 @@
   margin-right: auto;
   margin-bottom: 0px;
   margin-left: auto;
-  padding-top: 60px;
 
   color: $title-text-color;
   font-family: $font-first;

@@ -39,7 +39,7 @@ a {
 
 @media screen and (min-width: 480px) {
   .section {
-    padding: 0px;
+    padding: 60px 0px 60px 0px;
   }
 }
 
@@ -57,6 +57,7 @@ a {
 
 @media screen and (min-width: 480px) {
   .container {
+    padding: 60px 15px;
     width: 480px;
   }
 }
@@ -88,6 +89,7 @@ body {
 
 @media screen and (min-width: 480px) {
   .page-header {
+    padding-top: 60px;
     width: 480px;
   }
 }
@@ -576,11 +578,29 @@ body {
   }
 }
 
+@media screen and (min-width: 480px) {
+  .container-features {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px 15px;
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container-features {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container-features {
+    width: 1200px;
+  }
+}
+
 .features.list {
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-left: 0px;
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: auto;
@@ -642,7 +662,6 @@ body {
 @media screen and (min-width: 480px) {
   .features-icon {
     max-width: 450px;
-    margin-top: 30px;
   }
 }
 
@@ -739,7 +758,7 @@ body {
   right: 0;
 }
 
-.profile .list {
+.profile.list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -785,8 +804,15 @@ body {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .section.team {
+    width: 1200px;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .container-team {
+    padding: 60px 15px;
     width: 480px;
   }
 }
@@ -797,12 +823,17 @@ body {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .container-team {
+    width: 1200px;
+  }
+}
+
 .team-title {
   margin-top: 0px;
   margin-right: auto;
   margin-bottom: 0px;
   margin-left: auto;
-  padding-top: 60px;
   color: #212121;
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -979,10 +1010,9 @@ body {
 }
 
 /*постоянные клиенты*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .container-clients {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    padding: 60px 15px;
   }
 }
 
@@ -1006,7 +1036,6 @@ body {
 }
 
 .clients-list {
-  padding-top: 50px;
   padding-left: 0px;
   margin: 0px;
 }
@@ -1136,8 +1165,7 @@ body {
 
 @media screen and (min-width: 480px) {
   .container.footer-box {
-    padding-top: 60px;
-    padding-bottom: 16px;
+    padding: 60px 15px;
     text-align: center;
   }
 }

@@ -2,11 +2,10 @@
 
 .container-clients {
   @media screen and (min-width: 480px) {
+    padding: 60px 15px;
   }
 
   @media screen and (min-width: 768px) {
-    margin-top: 60px;
-    margin-bottom: 60px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -38,7 +37,6 @@
 }
 
 .clients-list {
-  padding-top: 50px;
   padding-left: 0px;
   margin: 0px;
 
