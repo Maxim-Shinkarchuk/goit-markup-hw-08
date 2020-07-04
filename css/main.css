@@ -120,10 +120,10 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
@@ -159,7 +159,6 @@ body {
 
 .nav-item {
   text-align: center;
-  padding-bottom: 40px;
   position: relative;
 }
 
@@ -171,6 +170,18 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav-item {
+    margin: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-item {
+    padding-bottom: 40px;
   }
 }
 
@@ -253,9 +264,12 @@ body {
 
 @media screen and (min-width: 768px) {
   .contact-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -264,8 +278,10 @@ body {
   }
 }
 
-.contact-item + .contact-item {
-  margin-left: 30px;
+@media screen and (min-width: 1200px) {
+  .contact-item + .contact-item {
+    margin-left: 30px;
+  }
 }
 
 /*стиль адреса*/
@@ -283,8 +299,6 @@ body {
   font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
 }
@@ -298,9 +312,9 @@ body {
 
 @media screen and (min-width: 768px) {
   .address-mail {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -308,6 +322,8 @@ body {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
+    font-size: 12px;
+    line-height: 1.16;
   }
 }
 
@@ -315,6 +331,8 @@ body {
   .address-mail {
     padding-top: 32px;
     padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
   }
 }
 
@@ -364,8 +382,7 @@ body {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-top: 0px;
-    margin-left: 55px;
+    margin-right: 81px;
   }
 }
 
@@ -458,7 +475,6 @@ body {
 
 @media screen and (min-width: 480px) {
   .button-second {
-    margin-bottom: 44px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -596,6 +612,7 @@ body {
 @media screen and (min-width: 1200px) {
   .container-features {
     width: 1200px;
+    padding: 0px 15px 0px 15px;
   }
 }
 
@@ -627,6 +644,7 @@ body {
 }
 
 .features-item {
+  display: block;
   margin: 0px;
 }
 
@@ -635,6 +653,7 @@ body {
     -ms-flex-preferred-size: calc((100%-30px * 2) / 2);
         flex-basis: calc((100%-30px * 2) / 2);
     margin: 15px;
+    max-width: 354px;
   }
 }
 
@@ -658,6 +677,8 @@ body {
 @media screen and (min-width: 480px) {
   .features-icon {
     max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -1073,6 +1094,12 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  .clients-item {
+    margin: 15px;
   }
 }
 

@@ -9,7 +9,8 @@
   }
 
   @media screen and (min-width: 768px) {
-    display: flex;
+    display: inline-flex;
+    justify-content: center;
     flex-direction: column;
     margin: 0px;
   }
@@ -19,7 +20,15 @@
 }
 
 .contact-item + .contact-item {
-  margin-left: 30px;
+  @media screen and (min-width: 480px) {
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 30px;
+  }
 }
 
 /*стиль адреса*/
@@ -36,8 +45,6 @@
   font-family: $font-first;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
   letter-spacing: 0.02em;
 
   margin-bottom: 16px;
@@ -48,14 +55,18 @@
   }
 
   @media screen and (min-width: 768px) {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: flex-start;
+    font-size: 12px;
+    line-height: 1.16;
   }
 
   @media screen and (min-width: 1200px) {
     padding-top: 32px;
     padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
   }
 
   &:hover,
@@ -69,4 +80,12 @@
 .icon-address {
   margin-right: 10px;
   --color3: currentColor;
+  @media screen and (min-width: 480px) {
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
 }
