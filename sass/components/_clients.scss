@@ -2,7 +2,7 @@
 
 .container-clients {
   @media screen and (min-width: 480px) {
-    padding: 60px 15px;
+    padding: 0px;
   }
 
   @media screen and (min-width: 768px) {
@@ -14,8 +14,7 @@
 
 .clients.title {
   text-align: center;
-  margin-top: 0px;
-  margin-bottom: 50px;
+  margin: 0px;
 
   color: $title-text-color;
   font-family: $font-first;
@@ -58,6 +57,7 @@
 
 .clients-item {
   @media screen and (min-width: 480px) {
+    margin: 15px;
   }
 
   @media screen and (min-width: 768px) {
@@ -84,7 +84,6 @@
   @media screen and (min-width: 480px) {
     width: 210px;
     height: 90px;
-    margin-bottom: 30px;
   }
 
   @media screen and (min-width: 768px) {

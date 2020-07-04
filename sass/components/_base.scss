@@ -53,7 +53,8 @@ a {
   margin-right: auto;
 
   @media screen and (min-width: 480px) {
-    padding: 60px 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     width: 480px;
   }
 

@@ -57,7 +57,8 @@ a {
 
 @media screen and (min-width: 480px) {
   .container {
-    padding: 60px 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     width: 480px;
   }
 }
@@ -89,7 +90,7 @@ body {
 
 @media screen and (min-width: 480px) {
   .page-header {
-    padding-top: 60px;
+    padding: 60px 0px 60px 0px;
     width: 480px;
   }
 }
@@ -100,7 +101,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 26px 15px;
+    padding: 26px 0px 26px 0px;
   }
 }
 
@@ -580,10 +581,9 @@ body {
 
 @media screen and (min-width: 480px) {
   .container-features {
+    width: 480px;
     margin-left: auto;
     margin-right: auto;
-    padding: 60px 15px;
-    width: 480px;
   }
 }
 
@@ -634,12 +634,7 @@ body {
   .features-item {
     -ms-flex-preferred-size: calc((100%-30px * 2) / 2);
         flex-basis: calc((100%-30px * 2) / 2);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .features-item:not(:last-child) {
-    margin-right: 30px;
+    margin: 15px;
   }
 }
 
@@ -657,6 +652,7 @@ body {
   padding-top: 25px;
   padding-bottom: 25px;
   border-radius: 4px;
+  margin: 0px;
 }
 
 @media screen and (min-width: 480px) {
@@ -667,8 +663,8 @@ body {
 
 @media screen and (min-width: 768px) {
   .features-icon {
-    width: 354px;
     margin: 0px;
+    width: 354px;
   }
 }
 
@@ -715,6 +711,20 @@ body {
 }
 
 /*наш профиль*/
+@media screen and (min-width: 480px) {
+  .section.hidden-section {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section.hidden-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 @media screen and (min-width: 480px) {
   .container.features {
     display: none;
@@ -812,7 +822,7 @@ body {
 
 @media screen and (min-width: 480px) {
   .container-team {
-    padding: 60px 15px;
+    padding: 0px 15px 0px 15px;
     width: 480px;
   }
 }
@@ -1012,14 +1022,13 @@ body {
 /*постоянные клиенты*/
 @media screen and (min-width: 480px) {
   .container-clients {
-    padding: 60px 15px;
+    padding: 0px;
   }
 }
 
 .clients.title {
   text-align: center;
-  margin-top: 0px;
-  margin-bottom: 50px;
+  margin: 0px;
   color: #212121;
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -1070,6 +1079,12 @@ body {
   }
 }
 
+@media screen and (min-width: 480px) {
+  .clients-item {
+    margin: 15px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .clients-item {
     margin: 15px;
@@ -1102,7 +1117,6 @@ body {
   .clients__logo {
     width: 210px;
     height: 90px;
-    margin-bottom: 30px;
   }
 }
 
