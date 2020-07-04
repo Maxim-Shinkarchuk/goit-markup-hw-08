@@ -86,13 +86,11 @@ body {
 /* хедер*/
 .page-header {
   border-bottom: 1px solid #ececec;
-}
-
-@media screen and (min-width: 480px) {
-  .page-header {
-    padding: 60px 0px 60px 0px;
-    width: 480px;
-  }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -101,7 +99,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 26px 0px 26px 0px;
+    padding: 26px 15px 26px 15px;
   }
 }
 
@@ -116,7 +114,7 @@ body {
 }
 
 @media screen and (min-width: 480px) {
-  .page-header .container {
+  .header.container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -124,6 +122,17 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding: 16px;
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    width: 768px;
   }
 }
 
@@ -135,9 +144,12 @@ body {
 
 @media screen and (min-width: 768px) {
   .main-nav {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -167,6 +179,7 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 40px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -176,6 +189,7 @@ body {
 @media screen and (min-width: 768px) {
   .nav-item {
     margin: 0px;
+    padding: 0px;
   }
 }
 
@@ -220,8 +234,7 @@ body {
   .nav-link {
     display: block;
     margin-bottom: 0px;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    padding: 0px;
   }
 }
 
@@ -264,17 +277,16 @@ body {
 
 @media screen and (min-width: 768px) {
   .contact-list {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    display: block;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 0px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    flex-direction: column;
+    margin-left: 50px;
   }
 }
 
@@ -377,9 +389,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .logo {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     margin-right: 81px;
@@ -718,8 +728,6 @@ body {
 }
 
 .features.text {
-  margin-top: 10px;
-  margin-bottom: 0px;
   color: #757575;
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -727,6 +735,15 @@ body {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 480px) {
+  .features.text {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
 }
 
 /*наш профиль*/
@@ -817,24 +834,28 @@ body {
   letter-spacing: 0.03em;
 }
 
-.section.team {
+.section-team {
   background-color: #f5f4fa;
 }
 
 @media screen and (min-width: 480px) {
-  .section.team {
+  .section-team {
     width: 480px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .section.team {
+  .section-team {
     width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .section.team {
+  .section-team {
     width: 1200px;
   }
 }
@@ -968,7 +989,7 @@ body {
   }
 }
 
-.team .name {
+.team__content-card .name {
   text-align: center;
   margin: 0px;
   color: #212121;
@@ -980,7 +1001,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.team .text {
+.team__content-card .text {
   padding-top: 10px;
   text-align: center;
   margin: 0px;
@@ -1179,6 +1200,15 @@ body {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 60px 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .footer {
     padding-top: 48px;
@@ -1197,7 +1227,6 @@ body {
 
 @media screen and (min-width: 480px) {
   .container.footer-box {
-    padding: 60px 15px;
     text-align: center;
   }
 }

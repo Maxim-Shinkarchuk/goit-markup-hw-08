@@ -1,16 +1,17 @@
 /* хедер*/
 .page-header {
   border-bottom: 1px solid #ececec;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 
   @media screen and (min-width: 480px) {
-    padding: 60px 0px 60px 0px;
-    width: 480px;
   }
 
   @media screen and (min-width: 768px) {
     width: 768px;
     display: flex;
-    padding: 26px 0px 26px 0px;
+    padding: 26px 15px 26px 15px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -20,13 +21,19 @@
   }
 }
 
-.page-header .container {
+.header.container {
   @media screen and (min-width: 480px) {
     display: flex;
     flex-direction: row;
+    padding: 16px;
+    width: 480px;
   }
 
   @media screen and (min-width: 768px) {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    width: 768px;
   }
 
   @media screen and (min-width: 1200px) {

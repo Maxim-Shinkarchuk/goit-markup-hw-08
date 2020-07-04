@@ -1,8 +1,12 @@
-.section.team {
+.section-team {
   background-color: $accent-background-color;
 
   @media screen and (min-width: 480px) {
     width: 480px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   @media screen and (min-width: 768px) {
@@ -130,7 +134,7 @@
   }
 }
 
-.team .name {
+.team__content-card .name {
   text-align: center;
   margin: 0px;
 
@@ -143,7 +147,7 @@
   letter-spacing: 0.03em;
 }
 
-.team .text {
+.team__content-card .text {
   padding-top: 10px;
   text-align: center;
   margin: 0px;
