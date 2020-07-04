@@ -2,21 +2,14 @@
 .footer {
   background-color: #2f303a;
 
-  margin-left: auto;
-  margin-right: auto;
-
   @media screen and (min-width: 480px) {
     padding-bottom: 0px;
   }
 
   @media screen and (min-width: 768px) {
-    padding: 60px 15px;
-    display: flex;
   }
 
   @media screen and (min-width: 1200px) {
-    padding-top: 48px;
-    padding-bottom: 21px;
   }
 }
 
@@ -29,13 +22,20 @@
 
   @media screen and (min-width: 480px) {
     text-align: center;
+    padding: 60px 15px 60px 15px;
   }
 
   @media screen and (min-width: 768px) {
-    display: flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 60px 15px;
   }
 
   @media screen and (min-width: 1200px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -46,7 +46,6 @@
   @media screen and (min-width: 768px) {
     display: flex;
     flex-direction: column;
-    margin-left: 100px;
     width: 232px;
   }
 
@@ -92,8 +91,8 @@
   }
 
   @media screen and (min-width: 768px) {
-    display: flex;
-    justify-content: center;
+    display: block;
+    text-align: center;
   }
 
   @media screen and (min-width: 1200px) {
@@ -118,8 +117,8 @@
   }
 
   @media screen and (min-width: 768px) {
-    display: flex;
-    justify-content: center;
+    display: block;
+    text-align: center;
   }
 
   @media screen and (min-width: 1200px) {
@@ -133,7 +132,7 @@
   }
 
   @media screen and (min-width: 768px) {
-    display: flex;
+    display: block;
     flex-wrap: wrap;
   }
 
@@ -163,6 +162,7 @@
   }
 
   @media screen and (min-width: 768px) {
+    margin: 0px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -217,6 +217,23 @@
 
 .footer__social-icon {
   --color6: #ffffff;
+}
+
+.footer__container__subscribe {
+  @media screen and (min-width: 480px) {
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 0px;
+  }
 }
 
 .footer__container__subscribe__join {
