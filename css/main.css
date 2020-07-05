@@ -470,13 +470,10 @@ body.modal-open {
 /*стиль кнопок*/
 .button-primary {
   display: block;
-  max-width: 200px;
+  min-width: 200px;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
   border-radius: 3px;
   border: none;
   font-family: Roboto, sans-serif;
@@ -489,40 +486,34 @@ body.modal-open {
   background-color: #2196f3;
 }
 
-@media screen and (min-width: 480px) {
-  .button-primary {
-    width: 200px;
-  }
-}
-
-.button-second {
+.button-primary .button-second {
   background-color: #2196f3;
   margin-left: auto;
   margin-right: auto;
 }
 
 @media screen and (min-width: 480px) {
-  .button-second {
+  .button-primary .button-second {
     margin-left: auto;
     margin-right: auto;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .button-second {
+  .button-primary .button-second {
     margin: 0px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .button-second {
+  .button-primary .button-second {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
   }
 }
 
-.button-second .text-button {
+.button-primary .button-second .text-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -539,12 +530,12 @@ body.modal-open {
   letter-spacing: 0.06em;
 }
 
-.button-list {
+.button-primary .button-list {
   background-color: #ffffff;
   color: #212121;
 }
 
-.button-list.button {
+.button-primary .button-list.button {
   background-color: #f5f4fa;
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -554,12 +545,12 @@ body.modal-open {
   letter-spacing: 0.03em;
 }
 
-.button-list.button:hover {
+.button-primary .button-list.button:hover {
   background-color: #2196f3;
   color: #ffffff;
 }
 
-.button-menu {
+.button-primary .button-menu {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -576,25 +567,25 @@ body.modal-open {
 }
 
 @media screen and (min-width: 768px) {
-  .button-menu {
+  .button-primary .button-menu {
     display: none;
   }
 }
 
-.button-menu :hover,
-.button-menu :focus {
+.button-primary .button-menu :hover,
+.button-primary .button-menu :focus {
   fill: #2196f3;
 }
 
-.button-menu .icon-cross {
+.button-primary .button-menu .icon-cross {
   display: none;
 }
 
-.button-menu.is-open .icon-cross {
+.button-primary .button-menu.is-open .icon-cross {
   display: block;
 }
 
-.button-menu.is-open .icon-menu {
+.button-primary .button-menu.is-open .icon-menu {
   display: none;
 }
 
@@ -614,6 +605,11 @@ body.modal-open {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1600px;
+  height: 400px;
   margin-left: auto;
   margin-right: auto;
   background-color: #310303;
@@ -632,25 +628,15 @@ body.modal-open {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .section-hero {
-    max-width: 768px;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .section-hero {
-    max-width: 1600px;
-    max-height: 600px;
+    height: 600px;
   }
 }
 
 .hero-title {
-  display: block;
   margin-top: 0px;
-  margin-right: auto;
-  margin-bottom: 0px;
-  margin-left: auto;
+  margin-bottom: 30px;
   text-align: center;
   text-transform: uppercase;
   font-family: Roboto, sans-serif;
@@ -662,20 +648,10 @@ body.modal-open {
   color: #ffffff;
 }
 
-@media screen and (min-width: 480px) {
-  .hero-title {
-    max-width: 360px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .hero-title {
     font-size: 44px;
     line-height: 1.36;
-    max-width: 696px;
   }
 }
 
