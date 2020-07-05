@@ -101,6 +101,7 @@ body {
             justify-content: space-between;
     padding: 16px;
     width: 480px;
+    min-height: 60px;
   }
 }
 
@@ -121,10 +122,12 @@ body {
 }
 
 /*стиль навигации*/
-.main-nav {
-  display: none;
-  margin-top: 0px;
-  margin-bottom: 0px;
+@media screen and (min-width: 480px) {
+  .main-nav {
+    display: none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -146,9 +149,14 @@ body {
 
 @media screen and (min-width: 480px) {
   .main-nav.is-open {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -370,10 +378,6 @@ body {
 /*лого*/
 .logo {
   font-family: Raleway, sans-serif;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-left: 16px;
   color: #2196f3;
   font-size: 24px;
   line-height: 1.16;
@@ -394,7 +398,7 @@ body {
 @media screen and (min-width: 768px) {
   .logo {
     display: block;
-    margin-right: 81px;
+    margin-right: 80px;
   }
 }
 
@@ -544,6 +548,12 @@ body {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
   padding: 0;
   border: none;

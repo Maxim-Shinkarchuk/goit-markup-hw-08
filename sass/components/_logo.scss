@@ -2,8 +2,6 @@
 .logo {
   font-family: $font-second;
 
-  align-items: center;
-  padding-left: 16px;
   color: $accent-color;
   font-size: 24px;
   line-height: 1.16;
@@ -20,7 +18,7 @@
 
   @media screen and (min-width: 768px) {
     display: block;
-    margin-right: 81px;
+    margin-right: 80px;
   }
 
   @media screen and (min-width: 1200px) {
