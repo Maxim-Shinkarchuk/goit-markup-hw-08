@@ -2,4 +2,7 @@
 body {
   background-color: #ffffff;
   color: $title-second-text-color;
+  &.modal-open {
+    overflow: hidden;
+  }
 }
