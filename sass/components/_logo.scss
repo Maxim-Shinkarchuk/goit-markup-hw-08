@@ -6,73 +6,37 @@
   color: $accent-color;
   font-size: 24px;
   line-height: 1.16;
+  font-weight: 700;
 
   @media screen and (min-width: 480px) {
-    text-align: center;
-    font-style: normal;
-    font-weight: bold;
-    letter-spacing: 0.03em;
-    padding: 0px;
-    margin-top: 0px;
-    display: block;
+    margin-right: 81px;
   }
 
   @media screen and (min-width: 768px) {
-    display: block;
-    margin-right: 80px;
+    margin: 0px;
   }
 
   @media screen and (min-width: 1200px) {
-    display: flex;
     font-size: 26px;
     line-height: 1.19;
   }
 }
 
 .logo-header {
-  display: inline-block;
-
   color: $title-text-color;
-  font-family: $font-second;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
 
   @media screen and (min-width: 1200px) {
     font-size: 26px;
     line-height: 1.19;
   }
-  @media screen and (min-width: 768px) {
-    display: block;
-  }
-
-  @media screen and (min-width: 1200px) {
-    padding: 0px;
-  }
 }
 
 .logo-footer {
-  margin: 0px;
+  margin-bottom: 20px;
   padding: 0px;
-
   color: $accent-background-color;
-  font-family: $font-second;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
-
-  @media screen and (min-width: 480px) {
-    text-align: center;
-  }
 
   @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1200px) {
-    display: block;
+    margin-right: 0px;
   }
 }
