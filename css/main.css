@@ -90,13 +90,15 @@ body {
 
 @media screen and (min-width: 480px) {
   .header.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding: 16px;
     width: 480px;
   }
@@ -108,15 +110,6 @@ body {
     margin-right: auto;
     padding: 26px 15px 26px 15px;
     width: 768px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
@@ -129,6 +122,7 @@ body {
 
 /*стиль навигации*/
 .main-nav {
+  display: none;
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -150,11 +144,17 @@ body {
   }
 }
 
+@media screen and (min-width: 480px) {
+  .main-nav.is-open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .nav-list {
   margin-top: 0px;
   margin-bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
   padding: 0px;
 }
 
@@ -540,6 +540,39 @@ body {
   color: #ffffff;
 }
 
+.button-menu {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .button-menu {
+    display: none;
+  }
+}
+
+.button-menu :hover,
+.button-menu :focus {
+  fill: #2196f3;
+}
+
+.button-menu .icon-cross {
+  display: none;
+}
+
+.button-menu.is-open .icon-cross {
+  display: block;
+}
+
+.button-menu.is-open .icon-menu {
+  display: none;
+}
+
 .main-portfolio {
   background-color: #ffffff;
 }
@@ -556,8 +589,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 480px;
-  max-height: 400px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 200px;
@@ -569,6 +600,13 @@ body {
   background-position: center;
   background-size: cover;
   color: #ffffff;
+}
+
+@media screen and (min-width: 480px) {
+  .section-hero {
+    max-width: 480px;
+    max-height: 400px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1946,9 +1984,25 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (min-width: 480px) {
+  .button.list {
+    padding: 0px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .button.list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .button-item:not(:last-child) {
@@ -1982,6 +2036,12 @@ body {
   letter-spacing: 0.03em;
 }
 
+@media screen and (min-width: 480px) {
+  .button-container__button {
+    margin-bottom: 8px;
+  }
+}
+
 .button-container__button:hover, .button-container__button:focus, .button-container__button:active {
   background-color: #2196f3;
   color: #ffffff;
@@ -1996,17 +2056,35 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0px;
-  padding-top: 50px;
-  padding-left: 0px;
-  padding-right: 0px;
 }
 
-.production.item:not(:nth-child(3n)) {
+@media screen and (min-width: 480px) {
+  .production.list {
+    padding: 40px 0px 0px 0px;
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .production.list {
+    padding-top: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+/*.production.item:not(:nth-child(3n)) {
   margin-right: 30px;
 }
 
 .production.item:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
+}*/
+@media screen and (min-width: 480px) {
+  .production.item {
+    margin-right: 0px;
+    width: 450px;
+  }
 }
 
 .portfolio-box {

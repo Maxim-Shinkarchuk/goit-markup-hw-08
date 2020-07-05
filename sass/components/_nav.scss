@@ -1,7 +1,9 @@
 /*стиль навигации*/
 .main-nav {
+  display: none;
   margin-top: 0px;
   margin-bottom: 0px;
+
   @media screen and (min-width: 768px) {
     display: flex;
     flex-grow: 1;
@@ -9,15 +11,16 @@
     align-items: center;
   }
 }
+.main-nav.is-open {
+  @media screen and (min-width: 480px) {
+    display: flex;
+  }
+}
+
 .nav-list {
   margin-top: 0px;
   margin-bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
   padding: 0px;
-
-  @media screen and (min-width: 480px) {
-  }
 
   @media screen and (min-width: 768px) {
     display: flex;

@@ -1,6 +1,18 @@
 .button.list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 480px) {
+    padding: 0px;
+    justify-content: flex-start;
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: center;
+  }
 }
 
 .button-item:not(:last-child) {
@@ -28,6 +40,16 @@
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+
+  @media screen and (min-width: 480px) {
+    margin-bottom: 8px;
+  }
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
 
   &:hover,
   &:focus,

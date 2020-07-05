@@ -17,35 +17,32 @@
   <body>
     <!--Шапка-->
     <header class="page-header">
-      <div class="header-container">
+      <div class="header container">
+        <a class="logo" href="./index.html">Web&nbsp;<span class="logo-header">Studio</span></a>
         <!--Меню навигации-->
         <nav class="main-nav">
-          <a class="logo" href="./index.html">Web<span class="logo-header">Studio</span></a>
-          <ul class="list">
-            <li class="item">
+          <ul class="nav-list">
+            <li class="nav-item">
               <a href="./index.html" class="nav-link">
                 Студия
               </a>
             </li>
     
-            <li class="item">
+            <li class="nav-item">
               <a href="./portfolio.html" class="nav-link curent">
                 Портфолио
               </a>
             </li>
     
-            <li class="item">
+            <li class="nav-item">
               <a href="" class="nav-link">
                 Контакты
               </a>
             </li>
           </ul>
-        </nav>
-    
-        <!--Связь-->
-        <address class="address-nav">
-          <ul class="list">
-            <li class="item">
+          <!--Связь-->
+          <ul class="contact-list">
+            <li class="contact-item">
               <a href="mailto:info@devstudio.com" class="address-mail">
                 <svg class="icon-address" width=16 height=11>
                   <use href=./images/symbol-defs.svg#icon-envelope></use>
@@ -53,7 +50,7 @@
                 info@devstudio.com
               </a>
             </li>
-            <li class="item">
+            <li class="contact-item">
     
               <a href="tel:+380961111111" class="address-mail">
                 <svg class="icon-address" width="10" height="15">
@@ -63,7 +60,8 @@
               </a>
             </li>
           </ul>
-        </address>
+        </nav>
+    
       </div>
     </header>
     <!--основной блок-->
@@ -140,8 +138,8 @@
             <li class="production item">
                 <a class="portfolio-link" href="">
                   <div class="portfolio-box">
-                    <img class="portfolio__image-card" src="./images/portfolio-projects/img3.jpg"
-                      alt="Ресторан Seafood" width="370" height="294" />
+                    <img class="portfolio__image-card" srcset="./images/portfolio-projects/img3.jpg 1x 370w, /"
+                      alt="Ресторан Seafood"/>
                     <div class="portfolio-overlay">
                       <p class="overlay-text">Технокряк это современная площадка распространения коронавируса. Компании используют эту
                         платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.</p>
@@ -266,7 +264,7 @@
       <div class="container footer-box">
         <div class="footer__container__logo-adress">
           <a class="logo" href="./index.html">Web<span class="logo-footer">Studio</span></a>
-          <address>
+          <address class="footer-adress">
             <p class="footer__container__logo-adress__adress">
               г. Киев, пр-т Леси Украинки, 26
             </p>
@@ -309,7 +307,7 @@
           </ul>
         </div>
     
-        <div class="footer__container__subscribe">
+        <form class="footer__container__subscribe">
           <p class="footer__container__subscribe__join">
             Подпишитесь на рассылку
           </p>
@@ -319,7 +317,7 @@
             <svg class="send-icon" width="24" height="24">
               <use href="./images/symbol-defs.svg#icon-icon-send"></use>
             </svg></button>
-        </div>
+        </form>
       </div>
       <!--копирайт-->
       <p class="footer__copyright-container">

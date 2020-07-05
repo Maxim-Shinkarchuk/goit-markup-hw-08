@@ -81,3 +81,38 @@
     color: $title-second-text-color;
   }
 }
+
+.button-menu {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  @media screen and (min-width: 480px) {
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+  }
+
+  & :hover,
+  & :focus {
+    fill: #2196f3;
+  }
+
+  & .icon-cross {
+    display: none;
+  }
+}
+
+.button-menu.is-open .icon-cross {
+  display: block;
+}
+
+.button-menu.is-open .icon-menu {
+  display: none;
+}
