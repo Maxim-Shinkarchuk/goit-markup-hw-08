@@ -51,12 +51,12 @@ a {
 .container {
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 @media screen and (min-width: 480px) {
   .container {
-    padding-left: 15px;
-    padding-right: 15px;
     width: 480px;
   }
 }
@@ -70,8 +70,6 @@ a {
 @media screen and (min-width: 1200px) {
   .container {
     width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
   }
 }
 
@@ -87,10 +85,10 @@ body.modal-open {
 
 /* хедер*/
 .page-header {
-  border-bottom: 1px solid #ececec;
+  position: relative;
 }
 
-.header.container {
+.header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -100,37 +98,35 @@ body.modal-open {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 16px;
   min-height: 60px;
 }
 
-@media screen and (min-width: 480px) {
-  .header.container {
-    width: 480px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .header.container {
-    margin-left: auto;
-    margin-right: auto;
-    padding: 26px 15px 26px 15px;
-    width: 768px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .header.container {
-    width: 1200px;
-    padding: 0px 15px 0px 15px;
-  }
-}
-
 /*стиль навигации*/
-.main-nav {
-  display: none;
-  margin-top: 0px;
-  margin-bottom: 0px;
+@media screen and (max-width: 767px) {
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #ffffff;
+  }
+  .main-nav.is-open {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-top: 1px solid #ececec;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -147,18 +143,9 @@ body.modal-open {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
-}
-
-.main-nav.is-open {
-  display: block;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .nav-list {
@@ -378,6 +365,7 @@ body.modal-open {
 
 /*лого*/
 .logo {
+  display: block;
   font-family: Raleway, sans-serif;
   color: #2196f3;
   font-size: 24px;
@@ -468,52 +456,75 @@ body.modal-open {
 }
 
 /*стиль кнопок*/
-.button-primary {
+/*.button {
   display: block;
   min-width: 200px;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
+
   border-radius: 3px;
   border: none;
-  font-family: Roboto, sans-serif;
-  color: #ffffff;
+
+  font-family: $font-first;
+  color: $title-second-text-color;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
+  background-color: $accent-color;*/
+.button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 32px;
+  border-radius: 4px;
+  min-width: 200px;
+  border: transparent;
+  color: #ffffff;
   background-color: #2196f3;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.button-primary .button-second {
+.button-second {
   background-color: #2196f3;
   margin-left: auto;
   margin-right: auto;
 }
 
 @media screen and (min-width: 480px) {
-  .button-primary .button-second {
+  .button-second {
     margin-left: auto;
     margin-right: auto;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .button-primary .button-second {
+  .button-second {
     margin: 0px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .button-primary .button-second {
+  .button-second {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
   }
 }
 
-.button-primary .button-second .text-button {
+.button-second .text-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -530,12 +541,12 @@ body.modal-open {
   letter-spacing: 0.06em;
 }
 
-.button-primary .button-list {
+.button-list {
   background-color: #ffffff;
   color: #212121;
 }
 
-.button-primary .button-list.button {
+.button-list.button {
   background-color: #f5f4fa;
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -545,12 +556,12 @@ body.modal-open {
   letter-spacing: 0.03em;
 }
 
-.button-primary .button-list.button:hover {
+.button-list.button:hover {
   background-color: #2196f3;
   color: #ffffff;
 }
 
-.button-primary .button-menu {
+.button-menu {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -567,25 +578,25 @@ body.modal-open {
 }
 
 @media screen and (min-width: 768px) {
-  .button-primary .button-menu {
+  .button-menu {
     display: none;
   }
 }
 
-.button-primary .button-menu :hover,
-.button-primary .button-menu :focus {
+.button-menu :hover,
+.button-menu :focus {
   fill: #2196f3;
 }
 
-.button-primary .button-menu .icon-cross {
+.button-menu .icon-cross {
   display: none;
 }
 
-.button-primary .button-menu.is-open .icon-cross {
+.button-menu .button-menu.is-open .icon-cross {
   display: block;
 }
 
-.button-primary .button-menu.is-open .icon-menu {
+.button-menu .button-menu.is-open .icon-menu {
   display: none;
 }
 
@@ -610,8 +621,6 @@ body.modal-open {
           align-items: center;
   max-width: 1600px;
   height: 400px;
-  margin-left: auto;
-  margin-right: auto;
   background-color: #310303;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url(../images/hero/Header/img-480x400.jpg);
   background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/hero/Header/img-480x400.jpg);
@@ -619,13 +628,6 @@ body.modal-open {
   background-position: center;
   background-size: cover;
   color: #ffffff;
-}
-
-@media screen and (min-width: 480px) {
-  .section-hero {
-    max-width: 480px;
-    max-height: 400px;
-  }
 }
 
 @media screen and (min-width: 1200px) {

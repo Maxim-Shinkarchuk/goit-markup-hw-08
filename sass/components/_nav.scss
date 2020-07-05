@@ -1,23 +1,28 @@
 /*стиль навигации*/
 .main-nav {
-  display: none;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  @media screen and (min-width: 480px) {
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $title-second-text-color;
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-top: 1px solid #ececec;
+    }
   }
-
   @media screen and (min-width: 768px) {
     display: flex;
     flex-grow: 1;
     justify-content: space-between;
     align-items: center;
-  }
-}
-.main-nav.is-open {
-  display: block;
-  flex-direction: column;
-  align-items: center;
-  @media screen and (min-width: 480px) {
+    flex-basis: 100%;
   }
 }
 
