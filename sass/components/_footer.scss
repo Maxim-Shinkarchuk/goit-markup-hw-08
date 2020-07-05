@@ -1,16 +1,6 @@
 /*футер*/
 .footer {
   background-color: #2f303a;
-
-  @media screen and (min-width: 480px) {
-    padding-bottom: 0px;
-  }
-
-  @media screen and (min-width: 768px) {
-  }
-
-  @media screen and (min-width: 1200px) {
-  }
 }
 
 .container.footer-box {
@@ -19,10 +9,10 @@
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   justify-content: center;
+  text-align: center;
+  padding: 60px 15px 60px 15px;
 
   @media screen and (min-width: 480px) {
-    text-align: center;
-    padding: 60px 15px 60px 15px;
   }
 
   @media screen and (min-width: 768px) {
@@ -173,9 +163,9 @@
   display: flex;
   padding-left: 0px;
   list-style-type: none;
+  justify-content: center;
 
   @media screen and (min-width: 480px) {
-    justify-content: center;
     margin-top: 20px;
     margin-bottom: 60px;
   }
@@ -264,7 +254,6 @@
 
 .email-input {
   display: inline-flex;
-  width: 358px;
   height: 50px;
   padding: 15px;
   background-color: #2f303a;
@@ -274,7 +263,7 @@
   border-radius: 4px;
 
   @media screen and (min-width: 480px) {
-    width: 450px;
+    max-width: 450px;
     margin-bottom: 20px;
   }
 

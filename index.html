@@ -181,12 +181,22 @@
           <ul class="team-list">
             <li class="item team-card">
               <div class="team__card">
-                <img
-                  class="team__image"
-                  srcset="./images/Team/450x320/john-smith-450x320.jpg 1x 450w, ./images/Team/450x320/john-smith-450x320@2x.jpg 2x 450w, ./images/Team/354x260/john-smith-354x260.jpg 1x 354w, ./images/Team/354x260/john-smith-354x2600@2x.jpg 2x 354w, ./images/Team/john-smith.jpg 1x 270w, ./images/Team/john-smith@2x.jpg 2x 270w,"
-                  
-                  alt="Жека Семёнов"
-                />
+                <picture>
+                  <source srcset="./images/Team/450x320/john-smith-450x320.jpg 1x, 
+                                  ./images/Team/450x320/john-smith-450x320@2x.jpg 2x,"
+                    media="(max-width:767px)" />
+                
+                  <source srcset="./images/Team/354x260/john-smith-354x260.jpg 1x, 
+                                  ./images/Team/354x260/john-smith-354x260@2x.jpg 2x,"
+                    media="(max-width:1199px)" />
+                
+                  <source srcset="./images/Team/john-smith.jpg 1x, 
+                                  ./images/Team/john-smith@2x.jpg 2x", 
+                    media="(min-width:1200px)" />
+                
+                  <img src="./images/Team/john-smith.jpg" alt="Жека" />
+                </picture>
+                
                 <div class="team__content-card">
                   <h3 class="name">Жека Семёнов</h3>
                   <p class="text">Product Designer</p>
@@ -225,11 +235,19 @@
             </li>
             <li class="item team-card">
               <div class="team__card">
-                <img
-                  class="team__image"
-                  srcset="./images/Team/450x320/marta-stewart-450x320.jpg 450w, ./images/Team/450x320/marta-stewart-450x320@2x.jpg 2x 450w,"
-                  alt="Машка Свиридова.png"
-                />
+                <picture>
+                  <source srcset="./images/Team/450x320/marta-stewart-450x320.jpg 1x, 
+                                  ./images/Team/450x320/marta-stewarth-450x320@2x.jpg 2x," media="(max-width:767px)" />
+                
+                  <source srcset="./images/Team/354x260/marta-stewart-354x260.jpg 1x, 
+                                  ./images/Team/354x260/marta-stewart-354x260@2x.jpg 2x," media="(max-width:1199px)" />
+                
+                  <source srcset="./images/Team/marta-stewart.jpg 1x, 
+                                  ./images/Team/marta-stewart@2x.jpg 2x" , media="(min-width:1200px)" />
+                
+                  <img src="./images/Team/marta-stewart.jpg" alt="Машка" />
+                </picture>
+                
                 <div class="team__content-card">
                   <h3 class="name">Машка Свиридова</h3>
                   <p class="text">Frontend Developer</p>
@@ -268,11 +286,19 @@
                   </li>
             <li class="item team-card">
               <div class="team__card">
-                <img
-                  class="team__image"
-                  srcset="./images/Team/450x320/robert-jakis-450x320.jpg 450w, ./images/Team/450x320/robert-jakis-450x320@2x.jpg 2x 450w,"
-                  alt="Вова Янковский"
-                />
+                <div class="team__card">
+                  <picture>
+                    <source srcset="./images/Team/450x320/robert-jakis-450x320.jpg 1x, 
+                                    ./images/Team/450x320/robert-jakis-450x320@2x.jpg 2x," media="(max-width:767px)" />
+                
+                    <source srcset="./images/Team/354x260/robert-jakis-354x260.jpg 1x, 
+                                    ./images/Team/354x260/robert-jakis-354x260@2x.jpg 2x," media="(max-width:1199px)" />
+                
+                    <source srcset="./images/Team/robert-jakis.jpg 1x, 
+                                    ./images/Team/robert-jakis@2x.jpg 2x" , media="(min-width:1200px)" />
+                
+                    <img src="./images/robert-jakis.jpg" alt="Просто Вова" />
+                  </picture>
                 <div class="team__content-card">
                   <h3 class="name">Вова Янковский</h3>
                   <p class="text">Marketing</p>
@@ -311,12 +337,19 @@
                   </li>
             <li class="item team-card">
               <div class="team__card">
-                <img
-                  class="team__image"
-                  srcset="./images/Team/450x320/martin-doe-450x320.jpg 450w, ./images/Team/450x320/martin-doe-450x320@2x.jpg 2x 450w,"
-                  alt="Мартын Данько"
-                 
-                />
+                <picture>
+                  <source srcset="./images/Team/450x320/martin-doe-450x320.jpg 1x, 
+                                  ./images/Team/450x320/martin-doe-450x320@2x.jpg 2x," media="(max-width:767px)" />
+                
+                  <source srcset="./images/Team/354x260/martin-doe-354x260.jpg 1x, 
+                                  ./images/Team/354x260/martin-doe-354x260@2x.jpg 2x,"
+                    media="(max-width:1199px)" />
+                
+                  <source srcset="./images/Team/martin-doe.jpg 1x, 
+                                  ./images/Team/martin-doe@2x.jpg 2x" , media="(min-width:1200px)" />
+                
+                  <img src="./images/martin-doe.jpg" alt="Мартын" />
+                </picture>
                 <div class="team__content-card">
                   <h3 class="name">Мартын Данько</h3>
                   <p class="text">UI Designer</p>
