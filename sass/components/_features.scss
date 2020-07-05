@@ -16,11 +16,9 @@
 }
 
 .features.list {
-  padding-left: 0px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: -15px;
 
   @media screen and (min-width: 480px) {
   }
@@ -53,7 +51,7 @@
   }
 
   @media screen and (min-width: 1200px) {
-    flex-basis: calc((100%-30px * 24) / 4);
+    flex-basis: calc((100%-30px * 2) / 4);
     margin: 15px;
     max-width: 270px;
   }
