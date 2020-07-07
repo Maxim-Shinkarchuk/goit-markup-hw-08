@@ -2,6 +2,10 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  /* font-family: $font-first;*/
+}
+
 *,
 *::before,
 *::after {
@@ -35,8 +39,10 @@ a {
 }
 
 .section {
+  &.grey {
+    background-color: #f5f4fa;
+  }
   padding: 60px 0px 60px 0px;
-
   @media screen and (min-width: 1200px) {
     padding-top: 94px;
     padding-bottom: 94px;

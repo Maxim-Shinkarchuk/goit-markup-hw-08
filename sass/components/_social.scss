@@ -1,20 +1,22 @@
 .social-list {
-  display: flex;
-  justify-content: space-evenly;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
   margin: 0px;
   padding: 0px;
 }
 
 .social-links {
-  margin-top: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: $title-second-text-color;
-  align-items: center;
-  justify-content: center;
-  display: inline-flex;
+
   cursor: pointer;
   transition-property: background-color;
   transition-duration: 250ms;

@@ -4,6 +4,10 @@ html {
           box-sizing: border-box;
 }
 
+body {
+  /* font-family: $font-first;*/
+}
+
 *,
 *::before,
 *::after {
@@ -39,6 +43,10 @@ a {
 
 .section {
   padding: 60px 0px 60px 0px;
+}
+
+.section.grey {
+  background-color: #f5f4fa;
 }
 
 @media screen and (min-width: 1200px) {
@@ -208,7 +216,6 @@ body.modal-open {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: #212121;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
@@ -317,7 +324,6 @@ body.modal-open {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   color: #757575;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -493,7 +499,6 @@ body.modal-open {
           align-items: center;
   text-align: center;
   color: #ffffff;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 16px;
@@ -508,7 +513,6 @@ body.modal-open {
 
 .button-list.button {
   background-color: #f5f4fa;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -601,7 +605,6 @@ body.modal-open {
   margin-bottom: 30px;
   text-align: center;
   text-transform: uppercase;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 26px;
@@ -617,64 +620,26 @@ body.modal-open {
   }
 }
 
-.container-features {
-  padding: 60px 15px 60px 15px;
-}
-
-@media screen and (min-width: 480px) {
-  .container-features {
-    width: 480px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .container-features {
-    width: 768px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .container-features {
-    width: 1200px;
-  }
-}
-
-.features.list {
-  margin: -15px;
+.features-list {
+  margin: 0px;
   padding: 0px;
 }
 
 @media screen and (min-width: 768px) {
-  .features.list {
+  .features-list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -ms-flex-preferred-size: calc((100%-4 * 15) / 2);
-        flex-basis: calc((100%-4 * 15) / 2);
+    margin: -15px;
   }
-}
-
-@media screen and (min-width: 1200px) {
-  .features.list {
-    -ms-flex-preferred-size: calc((100%-6 * 15) / 4);
-        flex-basis: calc((100%-6 * 15) / 4);
-  }
-}
-
-.features-item {
-  display: block;
-  margin: 0px;
 }
 
 @media screen and (min-width: 480px) {
   .features-item {
     max-width: 450px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 30px;
   }
 }
 
@@ -682,8 +647,8 @@ body.modal-open {
   .features-item {
     -ms-flex-preferred-size: calc((100%-30px * 2) / 2);
         flex-basis: calc((100%-30px * 2) / 2);
-    margin: 15px;
     max-width: 354px;
+    margin: 15px;
   }
 }
 
@@ -691,7 +656,6 @@ body.modal-open {
   .features-item {
     -ms-flex-preferred-size: calc((100%-30px * 2) / 4);
         flex-basis: calc((100%-30px * 2) / 4);
-    margin: 15px;
     max-width: 270px;
   }
 }
@@ -701,16 +665,15 @@ body.modal-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 120px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
   border-radius: 4px;
-  margin: 0px;
+  margin-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
@@ -719,13 +682,11 @@ body.modal-open {
   }
 }
 
-.features.title {
+.features-title {
   text-align: center;
-  padding-left: 0px;
-  margin-bottom: 0px;
-  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-top: 0px;
   color: #212121;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -734,7 +695,7 @@ body.modal-open {
 }
 
 @media screen and (min-width: 768px) {
-  .features.title {
+  .features-title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -745,34 +706,26 @@ body.modal-open {
 }
 
 @media screen and (min-width: 1200px) {
-  .features.title {
+  .features-title {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
 }
 
-.features.text {
+.features-text {
   color: #757575;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-}
-
-@media screen and (min-width: 480px) {
-  .features.text {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-  }
+  margin-bottom: 30px;
+  margin-top: 0px;
 }
 
 @media screen and (min-width: 768px) {
-  .features.text {
+  .features-text {
     padding: 0px;
   }
 }
@@ -806,7 +759,6 @@ body.modal-open {
   margin-top: 0px;
   margin-bottom: 50px;
   color: #212121;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -854,33 +806,12 @@ body.modal-open {
   padding-bottom: 27px;
   color: #ffffff;
   background: rgba(47, 48, 58, 0.8);
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
   line-height: 1.14;
   text-align: center;
   letter-spacing: 0.03em;
-}
-
-.section-team {
-  background-color: #f5f4fa;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media screen and (min-width: 768px) {
-  .section-team {
-    width: 768px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .section-team {
-    width: 1200px;
-  }
 }
 
 .container-team {
@@ -909,12 +840,9 @@ body.modal-open {
 }
 
 .team-title {
+  margin-bottom: 30px;
   margin-top: 0px;
-  margin-right: auto;
-  margin-bottom: 0px;
-  margin-left: auto;
   color: #212121;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -924,14 +852,8 @@ body.modal-open {
 }
 
 .team-list {
-  margin-bottom: 0px;
-  padding-left: 0px;
-}
-
-@media screen and (min-width: 480px) {
-  .team-list {
-    margin-top: 30px;
-  }
+  padding: 0px;
+  margin: -15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -947,27 +869,27 @@ body.modal-open {
 @media screen and (min-width: 1200px) {
   .team-list {
     margin-top: 50px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
   }
 }
 
 @media screen and (min-width: 480px) {
-  .item.team-card {
+  .item__team-card {
     max-width: 450px;
     margin-bottom: 30px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .item.team-card {
+  .item__team-card {
     max-width: 354px;
+    margin: 15px;
+    -ms-flex-preferred-size: calc((100%-4 * 15) / 2);
+        flex-basis: calc((100%-4 * 15) / 2);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .item.team-card {
+  .item__team-card {
     max-width: 270px;
   }
 }
@@ -981,8 +903,20 @@ body.modal-open {
 }
 
 .team__content-card {
-  padding-top: 30px;
-  padding-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 32px 24px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -1019,11 +953,10 @@ body.modal-open {
   }
 }
 
-.team__content-card .name {
+.name {
   text-align: center;
-  margin: 0px;
+  margin: 0px 0px 10px;
   color: #212121;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -1031,12 +964,10 @@ body.modal-open {
   letter-spacing: 0.03em;
 }
 
-.team__content-card .text {
-  padding-top: 10px;
+.text {
   text-align: center;
-  margin: 0px;
+  margin: 0px 0px 16px;
   color: #757575;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -1045,31 +976,33 @@ body.modal-open {
 }
 
 .social-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0px;
   padding: 0px;
 }
 
 .social-links {
-  margin-top: 16px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: #ffffff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
   cursor: pointer;
   -webkit-transition-property: background-color;
   transition-property: background-color;
@@ -1089,17 +1022,10 @@ body.modal-open {
 }
 
 /*постоянные клиенты*/
-@media screen and (min-width: 480px) {
-  .container-clients {
-    padding: 0px;
-  }
-}
-
-.clients.title {
+.clients-title {
   text-align: center;
-  margin: 0px;
+  margin-bottom: 30px;
   color: #212121;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -1108,43 +1034,37 @@ body.modal-open {
 }
 
 @media screen and (min-width: 768px) {
-  .clients.title {
+  .clients-title {
     margin-bottom: 30px;
   }
 }
 
 .clients-list {
   padding-left: 0px;
-  margin: 0px;
+  margin: -15px;
+}
+
+.clients-item {
+  margin: 15px;
 }
 
 @media screen and (min-width: 480px) {
-  .clients-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+  .clients-item {
     -ms-flex-preferred-size: calc((100%-4 * 15) / 2);
         flex-basis: calc((100%-4 * 15) / 2);
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .clients-list {
+  .clients-item {
     -ms-flex-preferred-size: calc((100%-6 * 15) / 3);
         flex-basis: calc((100%-6 * 15) / 3);
-    max-width: 768px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 226px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .clients-list {
+  .clients-item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1152,13 +1072,7 @@ body.modal-open {
         -ms-flex-pack: justify;
             justify-content: space-between;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
   }
-}
-
-.clients-item {
-  margin: 15px;
 }
 
 .clients__logo {
@@ -1275,7 +1189,6 @@ body.modal-open {
   padding: 0px;
   margin-right: 0px;
   color: #ffffff;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1297,7 +1210,6 @@ body.modal-open {
 
 .footer__container__logo-adress__adress {
   color: #ffffff;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1328,7 +1240,6 @@ body.modal-open {
 
 .footer__container__logo-adress__contact {
   color: rgba(255, 255, 255, 0.6);
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1378,7 +1289,6 @@ body.modal-open {
   margin-top: 0px;
   margin-bottom: 21px;
   color: #ffffff;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -1488,7 +1398,6 @@ body.modal-open {
 
 .footer__container__subscribe__join {
   color: #ffffff;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 14px;
@@ -1559,7 +1468,6 @@ body.modal-open {
   cursor: pointer;
   border: none;
   color: #ffffff;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 16px;
@@ -1581,7 +1489,6 @@ body.modal-open {
       -ms-flex-pack: center;
           justify-content: center;
   color: rgba(255, 255, 255, 0.4);
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
@@ -1717,7 +1624,6 @@ body.modal-open {
 .modal-text {
   margin-top: 0;
   margin-bottom: 30px;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -1802,7 +1708,6 @@ body.modal-open {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1855,7 +1760,6 @@ body.modal-open {
 .textarea-coment {
   position: absolute;
   display: block;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -1887,7 +1791,6 @@ body.modal-open {
 .text-agreement {
   display: inline-block;
   margin-right: 2px;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: 0.03em;
@@ -1910,7 +1813,6 @@ body.modal-open {
 
 .agreement {
   display: inline-block;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: 0.03em;
@@ -1974,7 +1876,6 @@ body.modal-open {
   cursor: pointer;
   border-radius: 3px;
   border: none;
-  font-family: Roboto, sans-serif;
   color: #ffffff;
   font-style: normal;
   font-weight: bold;
@@ -1992,7 +1893,6 @@ body.modal-open {
 .production .hide-text {
   background-color: #2196f3;
   color: #ffffff;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -2055,7 +1955,6 @@ body.modal-open {
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   background-color: #f5f4fa;
   color: #212121;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -2184,7 +2083,6 @@ body.modal-open {
 
 .overlay-text {
   color: #ffffff;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -2216,7 +2114,6 @@ body.modal-open {
   padding-right: 24px;
   margin: 0;
   color: #212121;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -2231,7 +2128,6 @@ body.modal-open {
   padding-right: 24px;
   margin: 0;
   color: #757575;
-  font-family: Roboto, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;

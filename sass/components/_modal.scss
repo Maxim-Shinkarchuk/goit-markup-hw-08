@@ -97,7 +97,6 @@
 .modal-text {
   margin-top: 0;
   margin-bottom: 30px;
-  font-family: $font-first;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -164,7 +163,6 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  font-family: $font-first;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -216,7 +214,6 @@
   position: absolute;
   display: block;
 
-  font-family: $font-first;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -241,7 +238,6 @@
 .text-agreement {
   display: inline-block;
   margin-right: 2px;
-  font-family: $font-first;
   font-style: normal;
   font-weight: normal;
   letter-spacing: 0.03em;
@@ -260,7 +256,6 @@
 
 .agreement {
   display: inline-block;
-  font-family: $font-first;
   font-style: normal;
   font-weight: normal;
   letter-spacing: 0.03em;
@@ -316,7 +311,6 @@
   border-radius: 3px;
   border: none;
 
-  font-family: $font-first;
   color: $title-second-text-color;
   font-style: normal;
   font-weight: bold;
