@@ -1040,8 +1040,16 @@ body.modal-open {
 }
 
 .clients-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-left: 0px;
   margin: -15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .clients-item {
@@ -1085,6 +1093,8 @@ body.modal-open {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0px;
+  min-width: 150px;
   fill: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;

@@ -22,8 +22,11 @@
 }
 
 .clients-list {
+  display: flex;
+  flex-wrap: wrap;
   padding-left: 0px;
   margin: -15px;
+  justify-content: center;
 }
 
 .clients-item {
@@ -49,6 +52,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0px;
+  min-width: 150px;
 
   fill: #afb1b8;
   border: 1px solid #afb1b8;
