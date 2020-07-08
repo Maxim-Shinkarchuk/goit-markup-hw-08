@@ -43,7 +43,7 @@
 
   @media screen and (min-width: 1200px) {
     display: flex;
-    justify-content: space-between;
+    flex-basis: calc((100%-12 * 15) / 6);
     max-width: 1200px;
   }
 }
@@ -52,7 +52,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0px;
+  margin-right: 0px;
   min-width: 150px;
 
   fill: #afb1b8;
