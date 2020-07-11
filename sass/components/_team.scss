@@ -42,6 +42,8 @@
 }
 
 .item__team-card {
+  margin-left: auto;
+  margin-right: auto;
   @media screen and (min-width: 480px) {
     max-width: 450px;
     margin-bottom: 30px;
