@@ -21,14 +21,23 @@
 }
 
 .contact-item + .contact-item {
-  @media screen and (min-width: 480px) {
-  }
-
-  @media screen and (min-width: 768px) {
-  }
-
   @media screen and (min-width: 1200px) {
     margin-left: 30px;
+  }
+}
+
+.contact-item {
+  @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0px;
+  }
+}
+
+.contact-item:last-child {
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0px;
   }
 }
 
@@ -46,7 +55,6 @@
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0.02em;
-  margin-bottom: 16px;
 
   @media screen and (min-width: 480px) {
     margin-left: auto;

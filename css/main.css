@@ -331,6 +331,24 @@ body.modal-open {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .contact-item {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact-item {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contact-item:last-child {
+    margin-bottom: 0px;
+  }
+}
+
 /*стиль адреса*/
 .address-mail {
   text-align: center;
@@ -346,7 +364,6 @@ body.modal-open {
   font-style: normal;
   font-weight: 500;
   letter-spacing: 0.02em;
-  margin-bottom: 16px;
 }
 
 @media screen and (min-width: 480px) {
